@@ -44,6 +44,7 @@ export async function getStaticPaths(){
 export async function getStaticProps(params){
   const response = await client.getEntries({content_type:'recipe','fields.slug':params.params.slug});
   return{
-    props:{recipe:response.items}
+    props:{recipe:response.items},
+    revalidate: 1
   }
 }
