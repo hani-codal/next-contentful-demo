@@ -3,7 +3,6 @@ import  RecipeCard from '../components/RecipeCard';
 
 export default function Recipes({recipes}) {
   console.log("response",recipes);
-  console.log("revalidated incremental static generation")
   return (
     <div className="recipe-list">
       {recipes.map(recipe=>(
